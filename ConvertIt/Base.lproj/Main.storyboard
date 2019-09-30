@@ -26,8 +26,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="userInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="0Ju-tu-eFZ"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyc-zs-zQT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyc-zs-zQT">
                                 <rect key="frame" x="293" y="64" width="105" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="k4a-L4-V7r"/>
@@ -76,7 +79,7 @@
                                     <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iap-Le-cpn"/>
                                 </connections>
                             </button>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BPL-qO-7Yh">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BPL-qO-7Yh">
                                 <rect key="frame" x="16" y="59" width="32" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="3ve-KH-E2b"/>
@@ -87,6 +90,9 @@
                                     <segment title="-"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="signSegmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="OAl-hi-rWL"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-fW-4ky">
                                 <rect key="frame" x="64" y="528" width="286.5" height="28"/>
@@ -148,6 +154,7 @@
                         <outlet property="formulaPicker" destination="yGN-9Z-uKd" id="vdo-Xc-slw"/>
                         <outlet property="fromUnitsLabel" destination="kyc-zs-zQT" id="oL8-bg-172"/>
                         <outlet property="resultsLabel" destination="RVv-hu-Ob0" id="zXd-CM-dYQ"/>
+                        <outlet property="signSegment" destination="BPL-qO-7Yh" id="DdZ-7O-ymt"/>
                         <outlet property="userInput" destination="9dk-OC-ISj" id="Sh1-DX-NRa"/>
                     </connections>
                 </viewController>
